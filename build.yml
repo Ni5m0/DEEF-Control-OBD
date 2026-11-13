@@ -14,8 +14,15 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: 8.9
-      - run: gradle assembleDebug
+      - name: Trova il progetto
+        id: p
+        run: |
+          d=$(dirname "$(find . -name settings.gradle.kts -not -path './.git/*' | head -n1)")
+          echo "dir=$d" >> "$GITHUB_OUTPUT"
+      - name: Compila
+        run: gradle assembleDebug
+        working-directory: ${{ steps.p.outputs.dir }}
       - uses: actions/upload-artifact@v4
         with:
           name: DEEF-Control-debug
-          path: app/build/outputs/apk/debug/*.apk
+          path: ${{ steps.p.outputs.dir }}/app/build/outputs/apk/debug/*.apk
