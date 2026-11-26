@@ -158,7 +158,7 @@ Per domande o problemi scrivimi su Instagram: **[@federicodeef](https://instagra
 
 ## Sostieni il progetto
 
-Se l'app ti è utile puoi offrirmi un caffè: [☕ Offrimi un caffè](https://py.pl/pYnF1YLNeYrUNJKLZ0Z5dQ)
+Se l'app ti è utile puoi offrirmi un caffè: [☕ Offrimi un caffè](https://www.paypal.me/federicodeef)
 
 ## Licenza
 
